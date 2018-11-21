@@ -1,0 +1,36 @@
+{
+  "name": "video-lib",
+  "version": "0.1.0",
+  "description": "Helper methods for HTML video playback",
+  "main": "dist/index.js",
+  "author": "Fork Unstable Media GmbH <obj@fork.de>",
+  "license": "MIT",
+  "scripts": {
+    "build": "bili --filename index.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged; rimraf dist/; npm run build; git add dist/"
+    }
+  },
+  "lint-staged": {
+    "src/*.js": ["eslint --quiet --fix", "git add"]
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "hls.js": "^0.11.0",
+    "lodash.debounce": "^4.0.8"
+  },
+  "devDependencies": {
+    "bili": "^3.4.2",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.2",
+    "rimraf": "^2.6.2"
+  }
+}
