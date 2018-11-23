@@ -11,6 +11,10 @@ This library helps you on problems occuring when implementing custom HTML5 video
 
 Please take a look at the JSDoc of each method for further information.
 
+## Tricks
+
+-   Some browsers do not accept `<track kind="subtitles">` to be `mode="hidden"`. Use `kind="metadata"` instead.
+
 ## Creating a release
 
 Certain steps need to be done in order to create a new release:
