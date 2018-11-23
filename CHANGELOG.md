@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 -   VideoReady: Make necessary event and readyState configurable
+-   VideoSubtitles: Some browsers do not always accept `<track kind="subtitles">` to be `mode="hidden"`. Now it is automatically set to `kind="metadata"`
 
 ## [0.1.0] - 2018-11-21
 
