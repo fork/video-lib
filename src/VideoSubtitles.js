@@ -20,8 +20,6 @@ const VideoSubtitles = async ($video, $subsContainer) => {
   // make sure all subtitles are natively hidden
   for (let i = 0; i < $video.textTracks.length; i += 1) {
     // eslint-disable-next-line no-param-reassign
-    $video.textTracks[i].kind = 'metadata';
-    // eslint-disable-next-line no-param-reassign
     $video.textTracks[i].mode = 'hidden';
   }
 
