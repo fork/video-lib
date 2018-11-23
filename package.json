@@ -1,6 +1,6 @@
 {
   "name": "video-lib",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Helper methods for HTML video playback",
   "main": "dist/index.js",
   "author": "Fork Unstable Media GmbH <obj@fork.de>",
