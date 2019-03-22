@@ -26,3 +26,7 @@ Certain steps need to be done in order to create a new release:
 1. Commit changes: `git commit -a -m "Prepare release [version number]"`
 1. Finish release using `git flow release finish`
 1. Push all changes: `git push origin --all && git push origin --tags`
+
+## License
+
+See [LICENSE](LICENSE)

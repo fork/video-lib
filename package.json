@@ -1,5 +1,5 @@
 {
-  "name": "video-lib",
+  "name": "@4rk/video-lib",
   "version": "1.0.0",
   "description": "Helper methods for HTML video playback",
   "keywords": [

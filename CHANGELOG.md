@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+-   **Breaking:** Package renamed into `@4rk/video-lib`
+
 ## [1.0.0] - 2019-03-22
 
 ### Changed
