@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.1] - 2019-03-22
+
 ### Changed
 
 -   **Breaking:** Package renamed into `@4rk/video-lib`
@@ -31,6 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial release!
 
-[unreleased]: https://github.com/fork/video-lib/compare/v1.0.0...HEAD
+[unreleased]: https://github.com/fork/video-lib/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/fork/video-lib/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/fork/video-lib/compare/v0.1.1...v1.0.0
 [0.1.1]: https://github.com/fork/video-lib/compare/v0.1.0...v0.1.1
