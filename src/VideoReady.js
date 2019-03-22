@@ -1,5 +1,3 @@
-import { once } from './DOMHelper';
-
 /**
  * Video player ready promise
  *
@@ -19,7 +17,7 @@ const VideoReady = ($video, event = 'loadedmetadata', minReadyState = 1) =>
       return;
     }
 
-    once($video, event, resolve);
+    $video.addEventListener(event, resolve, { once: true });
   });
 
 export default VideoReady;

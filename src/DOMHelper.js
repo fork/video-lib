@@ -1,18 +1,18 @@
 /**
  * Adds classes to a DOM element
  *
+ * @private
  * @param {Element} $elem - Element the classes should get added to
  * @param {string} classNames - One or more classnames
  * @returns {void}
  */
 export const addClass = ($elem, ...classNames) =>
-  classNames
-    .filter(className => !$elem.classList.contains(className))
-    .forEach(className => $elem.classList.add(className));
+  classNames.forEach(className => $elem.classList.add(className));
 
 /**
  * Remove all children from an HTMLElement
  *
+ * @private
  * @param {HTMLElement} $elem - Element which should be cleared
  * @returns {void}
  */
@@ -23,36 +23,20 @@ export const clearElement = $elem => {
 };
 
 /**
- * Trigger an event once, then remove the event listener
- *
- * @param {HTMLElement} $elem - Element on which the listener should be added
- * @param {string} event - A case-sensitive string representing the event type to listen for
- * @param {function} listener - Event listener callback
- * @returns {void}
- */
-export const once = ($elem, event, listener) => {
-  const onEvent = (...args) => {
-    $elem.removeEventListener(event, onEvent);
-    listener(...args);
-  };
-  $elem.addEventListener(event, onEvent);
-};
-
-/**
  * Removes classes from a DOM element
  *
+ * @private
  * @param {Element} $elem - Element the classes should get removed from
  * @param {string} classNames - One or more classnames
  * @returns {void}
  */
 export const removeClass = ($elem, ...classNames) =>
-  classNames
-    .filter(className => $elem.classList.contains(className))
-    .forEach(className => $elem.classList.remove(className));
+  classNames.forEach(className => $elem.classList.remove(className));
 
 /**
  * Toggles a class on a DOM element
  *
+ * @private
  * @param {Element} $elem - Element for that the class should get toggled
  * @param {string} className - Classname that should get toggled
  * @param {boolean} state - Optional. A Boolean (not just truthy/falsy) value to determine whether the class should be added or removed.

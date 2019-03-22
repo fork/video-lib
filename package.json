@@ -1,36 +1,60 @@
 {
   "name": "video-lib",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Helper methods for HTML video playback",
-  "main": "dist/index.js",
-  "author": "Fork Unstable Media GmbH <obj@fork.de>",
+  "keywords": [
+    "hls",
+    "mi24",
+    "movingimage",
+    "movingimage24",
+    "object-fit",
+    "subtitle",
+    "subtitles",
+    "video"
+  ],
   "license": "MIT",
+  "author": "Fork Unstable Media GmbH <obj@fork.de>",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fork/video-lib.git"
+  },
   "scripts": {
-    "build": "bili --filename index.js"
+    "build": "rimraf dist/; babel src -d dist",
+    "release": "kacl prerelease && kacl release && prettier --write CHANGELOG.md"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged; rimraf dist/; npm run build; git add dist/"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "src/*.js": ["eslint --quiet --fix", "git add"]
+    "src/*.js": [
+      "eslint --quiet --fix",
+      "git add"
+    ]
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "hls.js": "^0.11.0",
+    "hls.js": "^0.12.4",
     "lodash.debounce": "^4.0.8"
   },
   "devDependencies": {
-    "bili": "^3.4.2",
-    "eslint": "^5.9.0",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@brightcove/kacl": "^0.1.6",
+    "eslint": "^5.15.3",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-config-prettier": "^3.3.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-prettier": "^3.0.0",
-    "husky": "^1.2.0",
-    "lint-staged": "^8.1.0",
-    "prettier": "^1.15.2",
-    "rimraf": "^2.6.2"
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.5",
+    "prettier": "^1.16.4",
+    "rimraf": "^2.6.3"
   }
 }
